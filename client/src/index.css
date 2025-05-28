@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 249 250 251; /* #F9FAFB */
+  --foreground: 17 24 39; /* #111827 */
+  --muted: 243 244 246; /* #F3F4F6 */
+  --muted-foreground: 107 114 128; /* #6B7280 */
+  --popover: 255 255 255; /* #FFFFFF */
+  --popover-foreground: 17 24 39; /* #111827 */
+  --card: 255 255 255; /* #FFFFFF */
+  --card-foreground: 17 24 39; /* #111827 */
+  --border: 229 231 235; /* #E5E7EB */
+  --input: 229 231 235; /* #E5E7EB */
+  --primary: 207 90% 54%; /* #1976D2 */
+  --primary-foreground: 211 100% 99%; /* #FAFCFF */
+  --secondary: 243 244 246; /* #F3F4F6 */
+  --secondary-foreground: 55 65 81; /* #374151 */
+  --accent: 243 244 246; /* #F3F4F6 */
+  --accent-foreground: 55 65 81; /* #374151 */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 207 90% 54%; /* #1976D2 */
+  --radius: 0.5rem;
+  --chart-1: 207 90% 54%;
+  --chart-2: 142 76% 36%;
+  --chart-3: 295 100% 38%;
+  --chart-4: 28 100% 53%;
+  --chart-5: 14 100% 57%;
+  --sidebar-background: 255 255 255; /* #FFFFFF */
+  --sidebar-foreground: 17 24 39; /* #111827 */
+  --sidebar-primary: 207 90% 54%; /* #1976D2 */
+  --sidebar-primary-foreground: 211 100% 99%; /* #FAFCFF */
+  --sidebar-accent: 243 244 246; /* #F3F4F6 */
+  --sidebar-accent-foreground: 55 65 81; /* #374151 */
+  --sidebar-border: 229 231 235; /* #E5E7EB */
+  --sidebar-ring: 207 90% 54%; /* #1976D2 */
+}
+
+.dark {
+  --background: 15 23 42; /* #0F172A */
+  --foreground: 248 250 252; /* #F8FAFC */
+  --muted: 30 41 59; /* #1E293B */
+  --muted-foreground: 148 163 184; /* #94A3B8 */
+  --popover: 15 23 42; /* #0F172A */
+  --popover-foreground: 248 250 252; /* #F8FAFC */
+  --card: 15 23 42; /* #0F172A */
+  --card-foreground: 248 250 252; /* #F8FAFC */
+  --border: 30 41 59; /* #1E293B */
+  --input: 30 41 59; /* #1E293B */
+  --primary: 207 90% 54%; /* #1976D2 */
+  --primary-foreground: 211 100% 99%; /* #FAFCFF */
+  --secondary: 30 41 59; /* #1E293B */
+  --secondary-foreground: 248 250 252; /* #F8FAFC */
+  --accent: 30 41 59; /* #1E293B */
+  --accent-foreground: 248 250 252; /* #F8FAFC */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 248 250 252; /* #F8FAFC */
+  --ring: 207 90% 54%; /* #1976D2 */
+  --sidebar-background: 15 23 42; /* #0F172A */
+  --sidebar-foreground: 248 250 252; /* #F8FAFC */
+  --sidebar-primary: 207 90% 54%; /* #1976D2 */
+  --sidebar-primary-foreground: 211 100% 99%; /* #FAFCFF */
+  --sidebar-accent: 30 41 59; /* #1E293B */
+  --sidebar-accent-foreground: 248 250 252; /* #F8FAFC */
+  --sidebar-border: 30 41 59; /* #1E293B */
+  --sidebar-ring: 207 90% 54%; /* #1976D2 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+    direction: rtl;
+  }
+  
+  html {
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .drag-handle {
+    cursor: grab;
+  }
+  
+  .drag-handle:active {
+    cursor: grabbing;
+  }
+  
+  .widget-preview {
+    transition: all 0.3s ease;
+  }
+  
+  .widget-preview:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+}
